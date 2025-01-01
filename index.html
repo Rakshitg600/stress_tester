@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>C++ Stress Test Generator</title>
+    <title>C++ Stress Test Snippet Generator</title>
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
     <div class="container">
-        <h1>C++ Stress Test Generator</h1>
-        
+        <h1>C++ Stress Test Snippet Generator</h1>
+        <div class="form-group return-type-section">
+            <label>Return Type:</label>
+            <select id="returnType">
+                <option value="int">Integer</option>
+                <option value="vector">Vector<int></option>
+                <option value="string">String</option>
+                <option value="binary">Binary String</option>
+                <option value="bool">Boolean</option>
+                <option value="char">Character</option>
+            </select>
+        </div>
+        <div class="form-group" id="multipleAnswersSection">
+            <label for="multipleAnswersCheckbox">Multiple answers possible?</label>
+            <input type="checkbox" id="multipleAnswersCheckbox" onchange="toggleComparatorInput()">
+        </div>
         <div class="form-group">
             <label for="paramCount">Number of Parameters:</label>
             <input type="number" id="paramCount" min="1" max="5" value="1">
@@ -21,7 +35,10 @@
             <button onclick="copyCode()" class="copy-button">Copy Code</button>
         </div>
     </div>
-
+    <footer class="footer">
+        <p>Found this tool helpful? Have suggestions for improvement?</p>
+        <p>Send your feedback to: <a href="mailto:rakshitg600@gmail.com">rakshitg600@gmail.com</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
