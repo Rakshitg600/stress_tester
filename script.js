@@ -28,14 +28,6 @@ function generateParameterInputs() {
         container.appendChild(paramInput);
         showTypeSpecificInputs(i);
     }
-
-    if (!document.getElementById('generateButton')) {
-        const generateBtn = document.createElement('button');
-        generateBtn.id = 'generateButton';
-        generateBtn.textContent = 'Generate Code';
-        generateBtn.onclick = generateCode;
-        container.appendChild(generateBtn);
-    }
 }
 
 function showTypeSpecificInputs(index) {
@@ -552,4 +544,15 @@ function copyCode() {
     codeArea.select();
     document.execCommand('copy');
     alert('Code copied to clipboard!');
+}
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const container = document.querySelector('.container');
+    container.classList.toggle('dark-mode');
+    const footer = document.querySelector('.footer');
+    footer.classList.toggle('dark-mode');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => button.classList.toggle('dark-mode'));
+    const textarea = document.querySelector('textarea');
+    if (textarea) textarea.classList.toggle('dark-mode');
 }

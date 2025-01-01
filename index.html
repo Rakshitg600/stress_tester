@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
+    <div class="theme-switcher">
+        <button id="themeToggle" onclick="toggleTheme()">Switch Theme</button>
+    </div>
+    
     <div class="container">
         <h1>C++ Stress Test Snippet Generator</h1>
         <div class="form-group return-type-section">
@@ -29,6 +33,9 @@
         </div>
 
         <div id="parameterInputs" class="parameter-inputs"></div>
+        <div id="container">
+            <button id="generateButton" onclick="generateCode()">Generate Code</button>
+        </div>
         
         <div class="code-output" style="display: none;" id="codeOutput">
             <textarea id="generatedCode" readonly></textarea>

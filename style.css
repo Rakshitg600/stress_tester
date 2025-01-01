@@ -2,7 +2,6 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
 }
 .container {
   background: white;
@@ -134,3 +133,140 @@ textarea {
   display: inline;
   width: auto;
 }
+
+
+
+
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to right, #11cb40, #25d1fc);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: auto;
+  transition: background 0.3s, color 0.3s;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.parameter-inputs {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0052a3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  font-family: monospace;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.copy-button {
+  margin-top: 10px;
+  background: #4caf50;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  color: #666;
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+}
+
+.container.dark-mode {
+  background: #2b2b2b;
+  color: #f0f0f0;
+}
+
+button.dark-mode {
+  background: #444;
+  color: white;
+}
+
+.footer.dark-mode {
+  background-color: #333;
+  color: #ccc;
+}
+
+textarea.dark-mode {
+  background: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+
+
+
+
