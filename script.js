@@ -360,7 +360,18 @@ function generateCode() {
 
     // Generate main function
     code += generateMainFunction(count, hasMultipleAnswers);
-
+    document.getElementById('generatedCode').addEventListener('wheel', function(e) {
+    const isScrollingUp = e.deltaY < 0;
+    const isAtTop = this.scrollTop === 0;
+    const isAtBottom = Math.abs(this.scrollTop + this.clientHeight - this.scrollHeight) < 1;
+    
+    // Only prevent default if we're not at the boundaries
+    // or if we're scrolling away from boundaries
+    if ((isScrollingUp && !isAtTop) || (!isScrollingUp && !isAtBottom)) {
+        e.preventDefault();
+        this.scrollTop += e.deltaY;
+    }
+});
     document.getElementById('codeOutput').style.display = 'block';
     document.getElementById('generatedCode').value = code;
 }
