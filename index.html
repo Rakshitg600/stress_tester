@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>C++ Stress Test Snippet Generator</title>
-    <link rel="stylesheet" href="style.css"></link>
+    <title>C++ Stress Test Snippet Generator</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="style.css"></link> <!-- Link to external stylesheet -->
 </head>
 <body>
+    <!-- Theme Switcher Button -->
     <div class="theme-switcher">
-        <button id="themeToggle" onclick="toggleTheme()">Switch Theme</button>
+        <button id="themeToggle">Switch Theme</button> <!-- Button to toggle between light and dark theme -->
     </div>
-    
+
+    <!-- Main Content Container -->
     <div class="container">
-        <h1>C++ Stress Test Snippet Generator</h1>
+        <h1>C++ Stress Test Snippet Generator</h1> <!-- Main heading -->
+
+        <!-- Return Type Selection -->
         <div class="form-group return-type-section">
-            <label>Return Type:</label>
-            <select id="returnType">
+            <label>Return Type:</label> <!-- Label for return type -->
+            <select id="returnType"> <!-- Dropdown for selecting return type -->
                 <option value="int">Integer</option>
                 <option value="vector">Vector<int></option>
                 <option value="string">String</option>
@@ -22,30 +26,42 @@
                 <option value="char">Character</option>
             </select>
         </div>
+
+        <!-- Multiple Answers Checkbox -->
         <div class="form-group" id="multipleAnswersSection">
-            <label for="multipleAnswersCheckbox">Multiple answers possible?</label>
-            <input type="checkbox" id="multipleAnswersCheckbox" onchange="toggleComparatorInput()">
-        </div>
-        <div class="form-group">
-            <label for="paramCount">Number of Parameters:</label>
-            <input type="number" id="paramCount" min="1" max="5" value="1">
-            <button onclick="generateParameterInputs()">Set Parameters</button>
+            <label for="multipleAnswersCheckbox">Multiple answers possible?</label> <!-- Label for checkbox -->
+            <input type="checkbox" id="multipleAnswersCheckbox"> <!-- Checkbox input -->
         </div>
 
-        <div id="parameterInputs" class="parameter-inputs"></div>
-        <div id="container">
-            <button id="generateButton" onclick="generateCode()">Generate Code</button>
+        <!-- Number of Parameters Input -->
+        <div class="form-group">
+            <label for="paramCount">Number of Parameters:</label> <!-- Label for parameter count -->
+            <input type="number" id="paramCount" value="1"> <!-- Input for specifying parameter count -->
+            <button id="settingParameters">Set Parameters</button> <!-- Button to confirm parameter count -->
         </div>
-        
-        <div class="code-output" style="display: none;" id="codeOutput">
-            <textarea id="generatedCode" readonly></textarea>
-            <button onclick="copyCode()" class="copy-button">Copy Code</button>
+
+        <!-- Dynamic Parameter Inputs Section -->
+        <div id="parameterInputs" class="parameter-inputs"></div> <!-- Container for parameter inputs, dynamically generated -->
+
+        <!-- Code Generation Button -->
+        <div id="container">
+            <button id="generateButton">Generate Code</button> <!-- Button to generate the C++ code snippet -->
+        </div>
+
+        <!-- Code Output Section -->
+        <div class="code-output" style="display: none;" id="codeOutput"> <!-- Initially hidden, shows generated code -->
+            <textarea id="generatedCode" readonly></textarea> <!-- Read-only text area for generated code -->
+            <button class="copy-button">Copy Code</button> <!-- Button to copy the generated code -->
         </div>
     </div>
+
+    <!-- Footer Section -->
     <footer class="footer">
-        <p>Found this tool helpful? Have suggestions for improvement?</p>
-        <p>Send your feedback to: <a href="mailto:rakshitg600@gmail.com">rakshitg600@gmail.com</a></p>
+        <p>Found this tool helpful? Have suggestions for improvement?</p> <!-- Feedback message -->
+        <p>Send your feedback to: <a href="mailto:rakshitg600@gmail.com">rakshitg600@gmail.com</a></p> <!-- Email link for feedback -->
     </footer>
-    <script src="script.js"></script>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>

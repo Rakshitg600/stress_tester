@@ -1,271 +1,201 @@
+/* General Body Styling */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  max-width: 800px;
-  margin: 20px auto;
+  font-family: system-ui, -apple-system, sans-serif; /* Use system font for compatibility */
+  max-width: 800px; /* Limit the maximum width for readability */
+  margin: 0 auto; /* Center the content horizontally */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack elements vertically */
+  background: linear-gradient(to right, #11cb40, #25d1fc); /* Gradient background */
+  color: #333; /* Text color */
+  transition: background 0.3s, color 0.3s; /* Smooth transitions */
 }
+
+/* Container Styling */
 .container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white; /* Set background color to white */
+  padding: 20px; /* Add padding inside the container */
+  border-radius: 8px; /* Round the corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
+
+/* Form Group Styling */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space between form groups */
 }
+
+/* Parameter Inputs Styling */
 .parameter-inputs {
-  margin-top: 15px;
+  margin-top: 15px; /* Space above parameter inputs */
+  display: flex; /* Arrange parameter cards side by side */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 15px; /* Space between parameter cards */
 }
+
+/* Label Styling */
 label {
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: 500; /* Make the label text bold */
 }
+
+/* Input and Select Styling */
 input,
 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+  width: 100%; /* Full width inputs */
+  padding: 8px; /* Add padding inside inputs */
+  margin-bottom: 10px; /* Space below inputs */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Round the corners */
+  box-sizing: border-box; /* Include padding in width */
 }
+
+/* Button Styling */
 button {
-  background: #0066cc;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
+  background: #0066cc; /* Primary button color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 4px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 14px; /* Standard font size */
 }
+
+/* Button Hover Effect */
 button:hover {
-  background: #0052a3;
+  background: #0052a3; /* Darker shade on hover */
 }
+
+/* Code Output Styling */
 .code-output {
-  margin-top: 20px;
+  margin-top: 20px; /* Space above the code output */
 }
+
+/* Textarea Styling */
 textarea {
-  width: 100%;
-  height: 500px;
-  font-family: monospace;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  resize: vertical;
+  width: 100%; /* Full width textarea */
+  height: 500px; /* Fixed height */
+  font-family: monospace; /* Monospace font for code */
+  padding: 10px; /* Add padding inside */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Round the corners */
+  resize: vertical; /* Allow vertical resizing only */
 }
+
+/* Copy Button Styling */
 .copy-button {
-  margin-top: 10px;
-  background: #4caf50;
+  margin-top: 10px; /* Space above copy button */
+  background: #4caf50; /* Green background */
 }
+
+/* Parameter Input Styling */
 .parameter-input {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 4px;
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 15px; /* Add padding inside */
+  border-radius: 4px; /* Round the corners */
+  flex: 1 1 calc(50% - 15px); /* Flexible width for two columns */
+  box-sizing: border-box; /* Include padding and border in width */
 }
+
+/* Checkbox Group Styling */
 .checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Align items vertically */
+  gap: 8px; /* Space between items */
 }
+
+/* Checkbox Styling */
 .checkbox-group input[type="checkbox"] {
-  width: auto;
-  margin: 0;
+  width: auto; /* Default checkbox width */
+  margin: 0; /* Remove default margin */
 }
-/* For side-by-side inputs */
+
+/* Side-by-Side Inputs */
 .value-range-inputs {
-  display: flex;
-  gap: 10px;
+  display: flex; /* Arrange inputs in a row */
+  gap: 10px; /* Space between inputs */
 }
 
 .value-range-inputs input {
-  width: calc(50% - 5px);
+  width: calc(50% - 5px); /* Adjust width for two inputs */
 }
 
-/* For custom character input */
+/* Custom Character Input Styling */
 .custom-char-input {
-  margin-top: 10px;
+  margin-top: 10px; /* Space above custom char input */
 }
 
-/* For return type section */
+/* Return Type Section Styling */
 .return-type-section {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px; /* Space below the section */
+  padding-bottom: 20px; /* Padding at the bottom */
+  border-bottom: 1px solid #ddd; /* Divider line */
 }
+
+/* Comparator Function Styling */
 #comparatorFunction {
-  width: 100%;
-  font-family: monospace;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+  width: 100%; /* Full width */
+  font-family: monospace; /* Monospace font */
+  padding: 10px; /* Add padding inside */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Round the corners */
+  resize: vertical; /* Allow vertical resizing */
 }
 
+/* Footer Styling */
 .footer {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f5f5f5;
-  text-align: center;
-  border-top: 1px solid #ddd;
+  margin-top: auto; /* Push footer to the bottom */
+  padding: 20px; /* Add padding inside */
+  background-color: #f5f5f5; /* Light gray background */
+  text-align: center; /* Center align text */
+  border-top: 1px solid #ddd; /* Divider line */
 }
 
+/* Footer Text Styling */
 .footer p {
-  margin: 5px 0;
-  color: #666;
+  margin: 5px 0; /* Vertical margin for paragraphs */
+  color: #666; /* Gray text color */
 }
 
+/* Footer Link Styling */
 .footer a {
-  color: #007bff;
-  text-decoration: none;
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
 }
 
+/* Footer Link Hover Effect */
 .footer a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
-.parameter-input {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-#multipleAnswersCheckbox{
-  display: inline;
-  width: auto;
-}
-
-
-
-
-/* General Styling */
-body {
-  font-family: 'Roboto', sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(to right, #11cb40, #25d1fc);
-  color: #333;
-  transition: background 0.3s, color 0.3s;
-}
-
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: auto;
-  transition: background 0.3s, color 0.3s;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.parameter-inputs {
-  margin-top: 15px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-label {
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-input,
-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  background: #0066cc;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-  background: #0052a3;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-textarea {
-  width: 100%;
-  height: 200px;
-  font-family: monospace;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.copy-button {
-  margin-top: 10px;
-  background: #4caf50;
-}
-
-.footer {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ddd;
-  position: relative;
-  bottom: 0;
-  margin-top: auto;
-  color: #666;
-  transition: background 0.3s, color 0.3s;
-}
-
-.footer a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+/* Multiple Answers Checkbox Styling */
+#multipleAnswersCheckbox {
+  display: inline; /* Inline display */
+  width: auto; /* Default width */
 }
 
 /* Dark Mode Styling */
 body.dark-mode {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #f0f0f0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark gradient background */
+  color: #f0f0f0; /* Light text color */
 }
 
 .container.dark-mode {
-  background: #2b2b2b;
-  color: #f0f0f0;
+  background: #2b2b2b; /* Dark container background */
+  color: #f0f0f0; /* Light text color */
 }
 
 button.dark-mode {
-  background: #444;
-  color: white;
+  background: #444; /* Dark button background */
+  color: white; /* White text color */
 }
 
 .footer.dark-mode {
-  background-color: #333;
-  color: #ccc;
+  background-color: #333; /* Dark footer background */
+  color: #ccc; /* Light gray text color */
 }
 
 textarea.dark-mode {
-  background: #333;
-  color: #f0f0f0;
-  border: 1px solid #555;
+  background: #333; /* Dark background for textarea */
+  color: #f0f0f0; /* Light text color */
+  border: 1px solid #555; /* Dark border */
 }
-
-
-
-
-

@@ -567,3 +567,10 @@ function toggleTheme() {
     const textarea = document.querySelector('textarea');
     if (textarea) textarea.classList.toggle('dark-mode');
 }
+function events(){
+    document.getElementById('themeToggle').addEventListener('click',toggleTheme);
+    document.getElementById('settingParameters').addEventListener('click',generateParameterInputs);
+    document.getElementById('generateButton').addEventListener('click',generateCode);
+    document.querySelector('.copy-button').addEventListener('click',copyCode);
+}
+events();
